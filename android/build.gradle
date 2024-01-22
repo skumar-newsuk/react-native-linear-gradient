@@ -15,7 +15,7 @@ buildscript {
             mavenCentral()
         }
         dependencies {
-            classpath 'com.android.tools.build:gradle:7.2.1'
+            classpath 'com.android.tools.build:gradle:8.2.1'
             if (isNewArchitectureEnabled()) {
                 classpath 'com.facebook.react:react-native-gradle-plugin'
             }
@@ -30,6 +30,7 @@ if (isNewArchitectureEnabled()) {
 }
 
 android {
+    namespace = "com.rnlineargradient"
     compileSdkVersion safeExtGet('compileSdkVersion', 31).toInteger()
     defaultConfig {
         minSdkVersion safeExtGet('minSdkVersion', 21)
